@@ -14,7 +14,7 @@ Existem apenas 2 endpoints na aplicação:
 
 **Exemplo:** `http://localhost:8000/api/v1/cep/busca-por-cep/38401332`
 
-**Response:**
+**Response: - precisando arrumar**
 
     {
         "error": false,
@@ -64,7 +64,7 @@ Existem apenas 2 endpoints na aplicação:
 
 Abra o terminal, vá até a pasta onde deseja clonar a aplicação e digite o comando abaixo:
 
-    git clone https://github.com/patrickmaciel/api-http-busca-cep.git
+    git clone https://github.com/augustopinheiro/api-http-busca-cep.git
 
 Como retorno, a pasta `api-http-busca-cep` será criada.
 
