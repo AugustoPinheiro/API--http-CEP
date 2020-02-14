@@ -4,7 +4,7 @@
 - **Framework:** Laravel 5.2.x
 - **Servidor:** PHP Built-in web server
 
-## Como funciona a aplicação?
+## Como funciona a aplicação??
 
 Essa pequena aplicação permite que você consulte um endereço pelo **CEP** ou pelo **Logradouro**.
 
