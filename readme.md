@@ -18,7 +18,7 @@ Existem apenas 2 endpoints na aplicação:
 
     {
         "error": false,
-        "addresses": [
+        "address": [
             {
                 "Logradouro/Nome": "Rua Moisés de Freitas ",
                 "Bairro/Distrito": "Jardim Brasília ",
