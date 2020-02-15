@@ -32,48 +32,52 @@ class CorreiosApi
         $dom = new DOMDocument;
         $dom->preserveWhiteSpace = false;
         $dom->loadHTML($htmlResponse);
-        $rows = $dom->getElementsByTagName('td');
-
-        if ($rows->length <= 1) {
+        // $rows = $dom->getElementsByTagName('td');
+        $Header = $dom->getElementsByTagName('th');
+        $Detail = $dom->getElementsByTagName('td');
+       
+        if ($Detail->length <= 1) {
             return [
                 'error' => true,
                 'message' => 'Nenhum endereço encontrado'
             ];
         }
-
-        $header = [];
-        foreach ($rows as $row) {
-            $tds = $row->childNodes;
-            foreach ($tds as $index => $td) {
-                if ($index % 2 != 0) {
-                    continue;
-                }
-                $header[$index] = preg_replace('/:/', '', $td->nodeValue);
-            }
-            break;
+    
+        //#Get header name of the table
+        foreach($Header as $NodeHeader) 
+        {
+            $aDataTableHeaderHTML[] = trim($NodeHeader->textContent);
         }
-
-        $addresses = [];
-        foreach ($rows as $index => $row) {
-            if ($index == 0) {
-                continue;
-            }
-
-            $tds = $row->childNodes;
-            $address = [];
-            foreach ($tds as $tdIndex => $td) {
-                if ($tdIndex % 2 != 0) {
-                    continue;
-                }
-                $address[$header[$tdIndex]] = $td->nodeValue;
-            }
-            array_push($addresses, $address, $header);
+        //print_r($aDataTableHeaderHTML); die();
+    
+        //#Get row data/detail table without header name as key
+        $i = 0;
+        $j = 0;
+        foreach($Detail as $sNodeDetail) 
+        {
+            $aDataTableDetailHTML[$j][] = trim($sNodeDetail->textContent);
+            $i = $i + 1;
+            $j = $i % count($aDataTableHeaderHTML) == 0 ? $j + 1 : $j;
         }
+        //print_r($aDataTableDetailHTML); die();
+        
+        //#Get row data/detail table with header name as key and outer array index as row number
+        for($i = 0; $i < count($aDataTableDetailHTML); $i++)
+        {
+            for($j = 0; $j < count($aDataTableHeaderHTML); $j++)
+            {
+                $aTempData[$i][$aDataTableHeaderHTML[$j]] = $aDataTableDetailHTML[$i][$j];
+            }
+             array_push($aDataTableDetailHTML);
+        }
+        $aDataTableDetailHTML = $aTempData; unset($aTempData);
+        // print_r($aDataTableDetailHTML); die();
+
 
         return [
             'error' => false,
-            'addresses' => $addresses,
-            'header' => $header
+            'addresses' => $aDataTableDetailHTML
         ];
     }
 }
+?>
