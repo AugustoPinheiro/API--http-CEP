@@ -1,4 +1,5 @@
-![Image carteiro](https://escrevereler.com.br/wp-content/uploads/2016/03/Jaiminho-carteiro.gif)
+![Image carteiro]
+(https://escrevereler.com.br/wp-content/uploads/2016/03/Jaiminho-carteiro.gif)
 
 # API HTTP para busca de CEP
 
