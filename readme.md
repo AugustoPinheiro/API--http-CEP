@@ -1,3 +1,5 @@
+![Image carteiro](https://escrevereler.com.br/wp-content/uploads/2016/03/Jaiminho-carteiro.gif)
+
 # API HTTP para busca de CEP
 
 - **Linguagem de Programação:** PHP 7.x
@@ -18,7 +20,7 @@ Existem apenas 2 endpoints na aplicação:
 
     {
         "error": false,
-        "addresses": [
+        "address": [
             {
                 "Logradouro/Nome": "Rua Moisés de Freitas ",
                 "Bairro/Distrito": "Jardim Brasília ",
