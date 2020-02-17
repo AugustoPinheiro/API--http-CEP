@@ -45,10 +45,10 @@ class CorreiosApi
                 'message' => 'Nenhum endereço encontrado'
             ];
         }
-        if ($Detail->length < 8) {
+        if ($Detail->length >= 8) {
             return [
                 'error' => true,
-                'message' => 'Nenhum endereço encontrado'
+                'message' => 'Nenhum CEP encontrado'
             ];
         }
         //#Get header name of the table
