@@ -5,6 +5,9 @@
 
 ## API HTTP para busca de CEP
 
+Caso não esteja funcionando como esperado, certifique-se que seguiu todos os passos conforme descrito nesse readme.md.
+
+
 - **Linguagem de Programação:** PHP 7.x
 - **Framework:** Laravel 5.2.x
 - **Servidor:** PHP Built-in web server
