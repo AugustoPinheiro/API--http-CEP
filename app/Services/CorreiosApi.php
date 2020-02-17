@@ -84,7 +84,7 @@ class CorreiosApi
 
         return [
             'error' => false,
-            'address' => $aDataTableDetailHTML
+            'addresses' => $aDataTableDetailHTML
         ];
     }
 }
