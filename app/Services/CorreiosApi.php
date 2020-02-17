@@ -48,7 +48,7 @@ class CorreiosApi
         {
             $aDataTableHeaderHTML[] = trim($NodeHeader->textContent);
         }
-        //print_r($aDataTableHeaderHTML); die();
+        //print_r($aDataTableHeaderHTML); die(); - debug
     
         //#Get row data/detail table without header name as key
         $i = 0;
@@ -67,11 +67,10 @@ class CorreiosApi
             for($j = 0; $j < count($aDataTableHeaderHTML); $j++)
             {
                 $aTempData[$i][$aDataTableHeaderHTML[$j]] = $aDataTableDetailHTML[$i][$j];
-            }
+        }
              array_push($aDataTableDetailHTML);
         }
         $aDataTableDetailHTML = $aTempData; unset($aTempData);
-        // print_r($aDataTableDetailHTML); die();
 
 
         return [
