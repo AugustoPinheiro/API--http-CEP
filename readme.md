@@ -1,5 +1,6 @@
-![Image carteiro](https://escrevereler.com.br/wp-content/uploads/2016/03/Jaiminho-carteiro.gif)
-
+<p align="center">
+  <img width="460" height="300" src="https://camo.githubusercontent.com/6ebc5d7a46ba9b36f55684ce022f73225430728d/68747470733a2f2f6573637265766572656c65722e636f6d2e62722f77702d636f6e74656e742f75706c6f6164732f323031362f30332f4a61696d696e686f2d636172746569726f2e676966">
+</p>
 # API HTTP para busca de CEP
 
 - **Linguagem de Programação:** PHP 7.x
@@ -14,25 +15,25 @@ Existem apenas 2 endpoints na aplicação:
 
 - `/api/v1/cep/busca-por-cep/{cep}` - GET
 
-**Exemplo:** `http://localhost:8000/api/v1/cep/busca-por-cep/38401332`
+**Exemplo:** `hhttp://cep.flu.ke/public/api/v1/cep/busca-por-cep/38401332`
 
 **Response: - precisando arrumar**
 
+   {
+  "error": false,
+  "address": [
     {
-        "error": false,
-        "address": [
-            {
-                "Logradouro/Nome": "Rua Moisés de Freitas ",
-                "Bairro/Distrito": "Jardim Brasília ",
-                "Localidade/UF": "Uberlândia/MG",
-                "CEP": "38401-332"
-            }
-        ]
+      "Logradouro\/Nome:": "Rua Helena Jacquey (Vl Helena) ",
+      "Bairro\/Distrito:": "Rudge Ramos ",
+      "Localidade\/UF:": "São Bernardo do Campo\/SP ",
+      "CEP:": "09635-060"
     }
+  ]
+}
 
 - `/api/v1/cep/busca-por-logradouro/{logradouro}` - GET
 
-**Exemplo:** `http://localhost:8000/api/v1/cep/busca-por-logradouro/Rua%20Patrick`
+**Exemplo:** `http://cep.flu.ke/public/api/v1/cep/busca-por-logradouro/Rua%20Patrick`
 
 **Response:**
 
@@ -40,15 +41,15 @@ Existem apenas 2 endpoints na aplicação:
         "error": false,
         "addresses": [
             {
-                "Logradouro/Nome": "Rua Patrick Drumont ",
-                "Bairro/Distrito": "Parada Amaral ",
-                "Localidade/UF": "Nova Iguaçu/RJ",
+                "Logradouro\/Nome": "Rua Patrick Drumont ",
+                "Bairro\/Distrito": "Parada Amaral ",
+                "Localidade/UF": "Nova Iguaçu\/RJ",
                 "CEP": "26041-088"
             },
             {
-                "Logradouro/Nome": "Rua Patrick de Mendonsa ",
-                "Bairro/Distrito": "Polícia Rodoviária ",
-                "Localidade/UF": "Araranguá/SC",
+                "Logradouro\/Nome": "Rua Patrick de Mendonsa ",
+                "Bairro\/Distrito": "Polícia Rodoviária ",
+                "Localidade\/UF": "Araranguá\/SC",
                 "CEP": "88902-382"
             },
             ...
@@ -79,7 +80,7 @@ Copie agora o arquivo `.env.example` na raiz do projeto e renomeie para `.env` (
 
     cp .env.example .env
 
-Volte para o terminal e digite o comando abaixo para finalizar:
+Volte para o terminal e digite o comando abaixo para finalizar:cp 
 
     php artisan key:generate
 
@@ -92,7 +93,7 @@ Abra o terminal, vá até a pasta onde está a aplicação e já dentro dela dig
     cd public/
     php -S localhost:8000
 
-Agora abra o browser de sua preferência e acesse `http://localhost:8000`.
+Agora abra o browser de sua preferência e acesse `http://cep.flu.ke/public/`.
 
 Pronto :)
 
