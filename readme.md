@@ -1,9 +1,7 @@
 <p align="center">
   <img width="460" height="300" src="https://camo.githubusercontent.com/6ebc5d7a46ba9b36f55684ce022f73225430728d/68747470733a2f2f6573637265766572656c65722e636f6d2e62722f77702d636f6e74656e742f75706c6f6164732f323031362f30332f4a61696d696e686f2d636172746569726f2e676966">
 </p>
-
-
-## API HTTP para busca de CEP
+# API HTTP para busca de CEP
 
 - **Linguagem de Programação:** PHP 7.x
 - **Framework:** Laravel 5.2.x
@@ -20,7 +18,7 @@ Existem apenas 2 endpoints na aplicação:
 **Exemplo:** `hhttp://cep.flu.ke/public/api/v1/cep/busca-por-cep/38401332`
 
 **Response: - precisando arrumar**
-
+```
    {
   "error": false,
   "address": [
@@ -32,6 +30,7 @@ Existem apenas 2 endpoints na aplicação:
     }
   ]
 }
+```
 
 - `/api/v1/cep/busca-por-logradouro/{logradouro}` - GET
 
