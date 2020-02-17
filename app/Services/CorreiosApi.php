@@ -4,6 +4,9 @@ namespace App\Services;
 use GuzzleHttp;
 use DOMDocument;
 
+// Turn off all error reporting
+error_reporting(0);
+
 class CorreiosApi
 {
     protected $client;
@@ -42,7 +45,12 @@ class CorreiosApi
                 'message' => 'Nenhum endereço encontrado'
             ];
         }
-    
+        if ($Detail->length < 8) {
+            return [
+                'error' => true,
+                'message' => 'Nenhum endereço encontrado'
+            ];
+        }
         //#Get header name of the table
         foreach($Header as $NodeHeader) 
         {
@@ -53,6 +61,7 @@ class CorreiosApi
         //#Get row data/detail table without header name as key
         $i = 0;
         $j = 0;
+        $teste = [];
         foreach($Detail as $sNodeDetail) 
         {
             $aDataTableDetailHTML[$j][] = trim($sNodeDetail->textContent);
@@ -68,7 +77,7 @@ class CorreiosApi
             {
                 $aTempData[$i][$aDataTableHeaderHTML[$j]] = $aDataTableDetailHTML[$i][$j];
         }
-             array_push($aDataTableDetailHTML);
+             array_push($aDataTableDetailHTMl);
         }
         $aDataTableDetailHTML = $aTempData; unset($aTempData);
 
