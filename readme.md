@@ -43,6 +43,7 @@ Existem apenas 2 endpoints na aplicação:
 **Exemplo:** `http://cep.flu.ke/public/api/v1/cep/busca-por-logradouro/Rua%20Patrick`
 
 **Response:**
+```
 
     {
         "error": false,
@@ -60,6 +61,7 @@ Existem apenas 2 endpoints na aplicação:
                 "CEP": "88902-382"
             },
             ...
+```
 
 
 ## Como configurar a aplicação?
@@ -100,7 +102,7 @@ Abra o terminal, vá até a pasta onde está a aplicação e já dentro dela dig
     cd public/
     php -S localhost:8000
 
-Agora abra o browser de sua preferência e acesse `http://cep.flu.ke/public/`.
+Agora abra o browser de sua preferência e acesse `http://localhost:8000`.
 
 Pronto :)
 
