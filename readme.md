@@ -76,7 +76,7 @@ Existem apenas 2 endpoints na aplicação:
 
 Abra o terminal, vá até a pasta onde deseja clonar a aplicação e digite o comando abaixo:
 
-    git clone https://github.com/augustopinheiro/api-http-busca-cep.git
+    git clone https://github.com/AugustoPinheiro/API-http-CEP.git
 
 Como retorno, a pasta `api-http-busca-cep` será criada.
 
