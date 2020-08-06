@@ -21,7 +21,7 @@ Existem apenas 2 endpoints na aplicação:
 
 - `/api/v1/cep/busca-por-cep/{cep}` - GET
 
-**Exemplo:** `hhttp://cep.flu.ke/public/api/v1/cep/busca-por-cep/38401332`
+**Exemplo:** `/public/api/v1/cep/busca-por-cep/09635060`
 
 **Response: - precisando arrumar**
 ```
